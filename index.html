@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+
+  <meta name="color-scheme" content="dark">
+  <meta name="darkreader-lock">
+
+  <!-- Favicon e Ícones para Abas do Navegador -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://davirian-tech.vercel.app/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://davirian-tech.vercel.app/assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://davirian-tech.vercel.app/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="https://davirian-tech.vercel.app/assets/favicon-32x32.png">
+
+  <!-- Open Graph / Meta Preview para WhatsApp, Telegram e Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davirian-tech.vercel.app/">
+  <meta property="og:title" content="Davi Rian | Engenheiro de Software, Automações & Tech Founder">
+  <meta property="og:description" content="Desenvolvimento de software de alta performance, automações de IA, bots inteligentes e ecossistemas web.">
+  <meta property="og:image" content="https://davirian-tech.vercel.app/assets/og_preview_1200x630.jpg">
+  <meta property="og:image:secure_url" content="https://davirian-tech.vercel.app/assets/og_preview_1200x630.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Davi Rian Tech">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://davirian-tech.vercel.app/">
+  <meta name="twitter:title" content="Davi Rian | Engenheiro de Software, Automações & Tech Founder">
+  <meta name="twitter:description" content="Desenvolvimento de software de alta performance, automações de IA, bots inteligentes e ecossistemas web.">
+  <meta name="twitter:image" content="https://davirian-tech.vercel.app/assets/og_preview_1200x630.jpg">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi Rian | Engenheiro de Software, Automações & Tech Founder</title>
+    <meta name="description" content="Desenvolvedor Full-Stack especializado em Bots de WhatsApp, Landing Pages de Alta Conversão, SaaS e Automações que geram resultados reais.">
+    
+    <!-- Open Graph / Redes Sociais -->
+
+    <!-- Favicon -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            base: '#080B11',
+                            card: '#0F1420',
+                            border: '#1E2638',
+                            hover: '#182133'
+                        },
+                        tech: {
+                            blue: '#4F46E5',
+                            cyan: '#06B6D4',
+                            emerald: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['Syne', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background-color: #080B11;
+            color: #E2E8F0;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glow-effect {
+            box-shadow: 0 0 35px -5px rgba(79, 70, 229, 0.25);
+        }
+        .glow-card:hover {
+            box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.3);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+        .code-gradient {
+            background: linear-gradient(135deg, #818CF8 0%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+  <link rel="canonical" href="https://davirian.dev/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Davirian Dev",
+    "url": "https://davirian.dev/",
+    "jobTitle": "Engenheiro de Software & Desenvolvedor Fullstack",
+    "description": "Portfólio oficial de Davirian com projetos web, mobile, automações e IA.",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white relative bg-[#080B11]">
+    <!-- Padrão Profitize: Canvas2D Aurora Orgânica de Fundo -->
+    <canvas id="profitize-aurora-canvas" class="fixed inset-0 pointer-events-none z-[-1] opacity-45"></canvas>
+
+    <!-- Barra de Navegação -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#080B11]/80 border-b border-dark-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center font-heading font-extrabold text-white text-lg shadow-lg group-hover:scale-105 transition-transform">
+                    DR
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-white text-lg block leading-tight">Davi Rian</span>
+                    <span class="text-[11px] text-slate-400 font-mono tracking-wider">SOFTWARE & TECH FOUNDER</span>
+                </div>
+            </a>
+
+            <!-- Links Desktop -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+                <a href="#cases" class="hover:text-white transition-colors">Cases Reais</a>
+                <a href="#acao" class="hover:text-white transition-colors">Em Ação 🎬</a>
+                <a href="#stack" class="hover:text-white transition-colors">Stack</a>
+                <a href="#calculadora" class="hover:text-white transition-colors">Simulador</a>
+                <a href="#sobre" class="hover:text-white transition-colors">Sobre Mim</a>
+            </nav>
+
+            <!-- Botão Orçamento -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/557196815876?text=Ol%C3%A1%20Davi!%20Acessei%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto." target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-indigo-600/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>Iniciar Projeto</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna de Texto -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Disponível para novos projetos corporativos</span>
+                        </div>
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+                            <span>🎓</span>
+                            <span>Estudante Tech Uniasselvi</span>
+                        </div>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+                        Engenharia de software e <span class="code-gradient">automações que geram receita</span>.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        Desenvolvedor Full-Stack especializado em <strong>Bots de WhatsApp inteligentes</strong>, <strong>Landing Pages de altíssima conversão</strong> e <strong>SaaS escaláveis</strong>. Soluções que reduzem trabalho manual e aumentam o faturamento.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="https://wa.me/557196815876?text=Fala%20Davi!%20Quero%20conversar%20sobre%20um%20projeto%20de%20tecnologia." target="_blank" rel="noopener" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-xl shadow-indigo-600/25 transition-all hover:scale-[1.02]">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Falar Diretamente Comigo</span>
+                        </a>
+
+                        <a href="#cases" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-dark-card border border-dark-border hover:border-slate-600 text-slate-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:bg-dark-hover">
+                            <i data-lucide="code-2" class="w-4 h-4 text-indigo-400"></i>
+                            <span>Ver Cases Reais</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas / Prova -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-dark-border/80 max-w-md mx-auto lg:mx-0 text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-heading">+5</div>
+                            <div class="text-xs text-slate-400">Projetos Ativos</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-heading">100%</div>
+                            <div class="text-xs text-slate-400">Focado em ROI</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-heading">24/7</div>
+                            <div class="text-xs text-slate-400">Bots Automatizados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Foto e Card Tech -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Efeito de brilho de fundo -->
+                        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-indigo-600 to-cyan-500 opacity-35 blur-2xl"></div>
+
+                        <!-- Card de Perfil com Foto Corporativa -->
+                        <div class="relative rounded-3xl bg-dark-card border border-dark-border p-5 shadow-2xl overflow-hidden">
+                            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden mb-5 border border-dark-border bg-slate-900">
+                                <img src="./assets/davi_dev_corporate_multimonitor.webp" alt="Davi Rian - Software Developer" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-transparent to-transparent opacity-80"></div>
+                                <div class="absolute bottom-3 left-3 right-3 bg-[#080B11]/90 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between">
+                                    <div>
+                                        <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                                            <span>Davi Rian</span>
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400" title="Online"></span>
+                                        </div>
+                                        <div class="text-[10px] text-slate-400 font-mono">Full-Stack & Automações</div>
+                                    </div>
+                                    <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/30">Senior Lead</span>
+                                </div>
+                            </div>
+
+                            <!-- Snippet de Código Flutuante -->
+                            <div class="p-3.5 rounded-xl bg-[#06080D] border border-dark-border text-xs font-mono text-slate-300">
+                                <div class="flex items-center justify-between text-[11px] text-slate-500 mb-2 pb-1.5 border-b border-dark-border">
+                                    <span class="flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    </span>
+                                    <span>davi-system.ts</span>
+                                </div>
+                                <p><span class="text-indigo-400">const</span> engineer = {</p>
+                                <p class="pl-4">name: <span class="text-emerald-400">"Davi Rian"</span>,</p>
+                                <p class="pl-4">stack: <span class="text-amber-300">["Node.js", "Python", "React", "AI"]</span>,</p>
+                                <p class="pl-4">focus: <span class="text-cyan-400">"High-Performance & Conversion"</span></p>
+                                <p>};</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="py-20 border-t border-dark-border bg-dark-card/40" id="servicos">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Como posso te ajudar</span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-3 mb-4">Soluções completas para seu negócio crescer</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Código robusto, design intuitivo e foco em gerar receita ou economizar o seu tempo operacional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Serviço 1: Bots de WhatsApp -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Bots & Automação de WhatsApp</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Atendimento automático 24 horas, triagem de clientes, disparo de avisos, moderação inteligente de grupos e cobranças com Pix automático.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ Integração oficial Baileys & VPS</li>
+                        <li class="flex items-center gap-2">✓ Respostas instantâneas e sem atrasos</li>
+                        <li class="flex items-center gap-2">✓ Painel administrativo integrado</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 2: Landing Pages de Alta Conversão -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mb-5">
+                            <i data-lucide="layout" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Landing Pages de Alta Conversão</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Páginas feitas sob medida para vender. Carregamento ultra-rápido, copywriting persuasivo, gatilhos de urgência e 100% responsivas no celular.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ Otimizadas para Vercel & Tailwind</li>
+                        <li class="flex items-center gap-2">✓ Botões de WhatsApp com rastreio</li>
+                        <li class="flex items-center gap-2">✓ Prova social dinâmica e checkout</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 3: Sistemas Web & Micro-SaaS -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-5">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Desenvolvimento Web & SaaS</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Criação de aplicativos sob demanda, dashboards com gráficos em tempo real, sistemas de login/PIN, área de membros e ferramentas para automação de tarefas.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ React, TypeScript, FastAPI e Node</li>
+                        <li class="flex items-center gap-2">✓ PWA instalável no celular e PC</li>
+                        <li class="flex items-center gap-2">✓ Armazenamento seguro de dados</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 4: Integrações de Pagamento Pix / Cartão -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-5">
+                            <i data-lucide="credit-card" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Gateways de Pagamento</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Configuração de checkout com Mercado Pago, Stripe, Asaas e Pix Copia e Cola para você receber pagamentos de clientes de forma segura e transparente.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ Baixa automática pós-pagamento</li>
+                        <li class="flex items-center gap-2">✓ Suporte a assinaturas recorrentes</li>
+                        <li class="flex items-center gap-2">✓ Notificações automáticas no WhatsApp</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 5: Inteligência Artificial & Processamento de Vídeo -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center mb-5">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">IA & Edição Dinâmica</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Sistemas de legendas automáticas via Whisper, automação de cortes em massa para Reels e Shorts com MoviePy e geração de conteúdo inteligente.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ Transcrição precisa com IA</li>
+                        <li class="flex items-center gap-2">✓ Aceleração por hardware GPU</li>
+                        <li class="flex items-center gap-2">✓ Pipelines em Python para criadores</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 6: Consultoria & Otimização de Performance -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-5">
+                            <i data-lucide="gauge" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Consultoria & Setup Tech</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            Auditoria de sites lentos, configuração de servidores VPS Linux, proteção de dados e migração de aplicações para a nuvem com máxima segurança.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-dark-border pt-4">
+                        <li class="flex items-center gap-2">✓ Deploy seguro em Vercel e Firebase</li>
+                        <li class="flex items-center gap-2">✓ Domínios personalizados e SSL</li>
+                        <li class="flex items-center gap-2">✓ Diagnóstico completo e suporte</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção: Davi em Ação (Fotos & Vídeos Profissionais) -->
+    <section class="py-20 border-t border-dark-border" id="acao">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-cyan-400 uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Presença & Autoridade</span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-3 mb-4">Davi em Ação: Tecnologia, Estratégia e Mídia</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Muito além de linhas de código: visão de negócios, liderança de projetos e comunicação de alto nível.</p>
+            </div>
+
+            <!-- Grid de Mídia / Fotos e Vídeos em Destaque -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Card 1: Executivo / CEO & Reuniões Estratégicas -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="./assets/davi_dev_executive_ceo_blazer.webp" alt="Davi Rian - Estratégia e Gestão Tech" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/30 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[10px] font-bold text-amber-400 bg-amber-500/15 border border-amber-500/30 px-2 py-0.5 rounded uppercase tracking-wider">Estratégia & Liderança</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Visão Executiva & Tomada de Decisão</h4>
+                        <p class="text-xs text-slate-300 mt-1">Planejamento arquitetural, negociações e alinhamento de metas de negócios.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Vídeo 1 (Holographic AI & Timeline) -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden bg-black flex items-center justify-center">
+                        <video src="./assets/videos/teaser_holographic_timeline.mp4" poster="./assets/davi_dev_corporate_multimonitor.webp" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></video>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/20 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
+                        <span class="text-[10px] font-bold text-indigo-400 bg-indigo-500/15 border border-indigo-500/30 px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1.5 w-fit">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-ping"></span>
+                            Vídeo em Ação • Inteligência Artificial
+                        </span>
+                        <h4 class="text-lg font-bold text-white mt-1">Engenharia de IA & Pipelines</h4>
+                        <p class="text-xs text-slate-300 mt-1">Arquitetura de agentes, automação de dados e visão computacional aplicada.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Vídeo 2 (Reunião Executiva & Negócios) -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden bg-black flex items-center justify-center">
+                        <video src="./assets/videos/davi_video_reuniao_executiva.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></video>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/20 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
+                        <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1.5 w-fit">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Vídeo em Ação • Reunião
+                        </span>
+                        <h4 class="text-lg font-bold text-white mt-1">Apresentação de Projetos & Clientes</h4>
+                        <p class="text-xs text-slate-300 mt-1">Postura profissional para defender escopo, prazos e entregáveis reais.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Edição Noturna & Deep Work (Vídeo) -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden bg-black flex items-center justify-center">
+                        <video src="./assets/videos/davi_dev_timeline_editing.mp4" poster="./assets/davi_dev_night_editor_coffee.webp" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></video>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/30 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
+                        <span class="text-[10px] font-bold text-purple-400 bg-purple-500/15 border border-purple-500/30 px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1.5 w-fit">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+                            Vídeo em Ação • Timeline
+                        </span>
+                        <h4 class="text-lg font-bold text-white mt-1">Pós-Produção & Pipelines de Mídia</h4>
+                        <p class="text-xs text-slate-300 mt-1">Domínio de ferramentas de timeline, áudio profissional e motion graphics.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Coding no Workstation (Vídeo Otimizado) -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden bg-black flex items-center justify-center">
+                        <video src="./assets/videos/teaser_dev_typing.mp4" poster="./assets/davi_dev_macbook_night_window.webp" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></video>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/30 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
+                        <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1.5 w-fit">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Vídeo em Ação • Código
+                        </span>
+                        <h4 class="text-lg font-bold text-white mt-1">Arquitetura Web Moderna</h4>
+                        <p class="text-xs text-slate-300 mt-1">Desenvolvimento focado em estabilidade, APIs rápidas e alta escalabilidade.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Gamer & Setup Futurista -->
+                <div class="group relative rounded-3xl overflow-hidden bg-dark-card border border-dark-border glow-card transition-all">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="./assets/davi_dev_gamer_chair_streetwear.webp" alt="Davi Rian - Cultura Gamer e Alta Performance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B11] via-[#080B11]/30 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/15 border border-cyan-500/30 px-2 py-0.5 rounded uppercase tracking-wider">Alta Performance</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Cultura Tech & Comunidade Gamer</h4>
+                        <p class="text-xs text-slate-300 mt-1">Conexão genuína com o público gamer de Salvador, esports e entretenimento.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Cases Reais -->
+    <section class="py-20 border-t border-dark-border bg-dark-card/30" id="cases">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Portfólio em Prática</span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-3 mb-4">Projetos reais construídos do zero</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Veja na prática a qualidade, arquitetura e usabilidade dos softwares que desenvolvo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Case 1: Família em Foco -->
+                <div class="rounded-3xl bg-dark-card border border-dark-border overflow-hidden glow-card transition-all flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-xs font-bold">PWA / React / TypeScript</span>
+                            <span class="text-xs text-slate-400 font-mono">v4.1 Online</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Família em Foco</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Aplicativo completo de gestão de hábitos diários (streak de dias seguidos), finanças familiares, área de metas e segurança com PIN de 4 dígitos. Instalável como PWA em celular e computador.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">React</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">TypeScript</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Tailwind CSS</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Local Storage Blindado</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-[#06080D]/60 border-t border-dark-border flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Status: Em produção contínua</span>
+                        <a href="https://davirian-dev.github.io/familia-em-foco/" target="_blank" rel="noopener" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                            <span>Acessar Demonstração</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case 2: Davi Bot SaaS -->
+                <div class="rounded-3xl bg-dark-card border border-dark-border overflow-hidden glow-card transition-all flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-bold">FastAPI / Whisper / MoviePy</span>
+                            <span class="text-xs text-slate-400 font-mono">Micro-SaaS Ativo</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Davi Bot SaaS de Edição</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Pipeline autônomo de cortes de vídeos longos do YouTube para Shorts, TikTok e Reels com inteligência artificial. Transcreve com Whisper, gera legendas sincronizadas e renderiza com aceleração de hardware.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Python 3.12</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">FastAPI</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">OpenAI Whisper</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">GPU VAAPI</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-[#06080D]/60 border-t border-dark-border flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Status: Em produção contínua</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/davirian-dev/davi-bot" target="_blank" rel="noopener" class="text-xs text-slate-400 hover:text-white flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>Código</span>
+                            </a>
+                            <a href="https://davi-bot-site.vercel.app" target="_blank" rel="noopener" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                                <span>Ver Landing Page</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Takeshi Bot Engine -->
+                <div class="rounded-3xl bg-dark-card border border-dark-border overflow-hidden glow-card transition-all flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold">Node.js / Baileys / VPS</span>
+                            <span class="text-xs text-slate-400 font-mono">Automação WhatsApp</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Takeshi Bot WhatsApp Engine</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Robô modular de alta performance para WhatsApp com suporte a multi-grupos, anti-link, anti-spam, comandos administrativos, gerador de stickers em tempo real e comandos de venda automática com Pix.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Node.js</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">@whiskeysockets/baileys</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">JSON DB</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">VPS Linux</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-[#06080D]/60 border-t border-dark-border flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Capacidade: Centenas de msgs/min</span>
+                        <a href="https://github.com/davirian-dev/takeshi-bot" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                            <span>Ver Repositório GitHub</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case 4: Plataformas Web de Conversão -->
+                <div class="rounded-3xl bg-dark-card border border-dark-border overflow-hidden glow-card transition-all flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold">HTML5 / Tailwind / Vercel Edge</span>
+                            <span class="text-xs text-slate-400 font-mono">Alta Conversão</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Plataformas de Membros & Checkout</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Arquitetura de landing pages com prova social dinâmica, painel de controle administrativo com cálculo de tempo de expiração em tempo real (6 meses e 1 ano) e checkout transparente.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Tailwind CSS</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Mercado Pago</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Vercel CDN</span>
+                            <span class="text-[11px] bg-[#06080D] px-2.5 py-1 rounded-md text-slate-300 border border-dark-border">Live Toasts</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-[#06080D]/60 border-t border-dark-border flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Performance: 99+ no Google PageSpeed</span>
+                        <a href="https://wa.me/557196815876?text=Ol%C3%A1%20Davi!%20Quero%20uma%20plataforma%20de%20membros%20e%20checkout%20de%20alta%20convers%C3%A3o." target="_blank" rel="noopener" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                            <span>Solicitar Projeto</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tecnologias / Stack -->
+    <section class="py-16 border-t border-dark-border" id="stack">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Tecnologias Dominadas</span>
+            <h3 class="text-2xl font-bold text-white mt-2 mb-10">Ferramentas de ponta para resultados duradouros</h3>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">⚡</span>
+                    <span class="text-xs font-bold text-slate-200">JavaScript / TS</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">⚛️</span>
+                    <span class="text-xs font-bold text-slate-200">React & Next.js</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🟢</span>
+                    <span class="text-xs font-bold text-slate-200">Node.js</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🐍</span>
+                    <span class="text-xs font-bold text-slate-200">Python / FastAPI</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🎨</span>
+                    <span class="text-xs font-bold text-slate-200">Tailwind CSS</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🤖</span>
+                    <span class="text-xs font-bold text-slate-200">Baileys WPP</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">▲</span>
+                    <span class="text-xs font-bold text-slate-200">Vercel Cloud</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🔥</span>
+                    <span class="text-xs font-bold text-slate-200">Firebase</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🐧</span>
+                    <span class="text-xs font-bold text-slate-200">Linux & VPS</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">💳</span>
+                    <span class="text-xs font-bold text-slate-200">Pix & Mercado Pago</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🎙️</span>
+                    <span class="text-xs font-bold text-slate-200">Whisper AI</span>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 transition-colors flex flex-col items-center gap-2">
+                    <span class="text-2xl">🐙</span>
+                    <span class="text-xs font-bold text-slate-200">Git & GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulador / Calculadora de Orçamento Interativa -->
+    <section class="py-20 border-t border-dark-border bg-dark-card/20" id="calculadora">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="rounded-3xl bg-gradient-to-b from-dark-card to-[#06080D] border border-dark-border p-6 sm:p-10 shadow-2xl">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Simulador de Projeto</span>
+                    <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-3">Quanto custa o seu projeto?</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-2">Selecione os módulos que você precisa e veja uma estimativa na hora para conversarmos:</p>
+                </div>
+
+                <div class="space-y-3.5 mb-8">
+                    <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="mod-lp" checked onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
+                            <div>
+                                <div class="text-sm font-bold text-white">Landing Page de Alta Conversão</div>
+                                <div class="text-xs text-slate-400">Design moderno, rápido, responsivo e adaptado para celulares</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 600</span>
+                    </label>
+
+                    <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="mod-bot" checked onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
+                            <div>
+                                <div class="text-sm font-bold text-white">Bot de WhatsApp Personalizado</div>
+                                <div class="text-xs text-slate-400">Atendimento 24h, menu automático e triagem de mensagens</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 500</span>
+                    </label>
+
+                    <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="mod-checkout" onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
+                            <div>
+                                <div class="text-sm font-bold text-white">Integração de Pagamentos Pix / Cartão</div>
+                                <div class="text-xs text-slate-400">Checkout Mercado Pago ou Stripe com baixa automática</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 350</span>
+                    </label>
+
+                    <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="mod-painel" onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
+                            <div>
+                                <div class="text-sm font-bold text-white">Painel Administrativo / Área de Membros</div>
+                                <div class="text-xs text-slate-400">Dashboard seguro para gerenciar clientes, planos e dados</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 500</span>
+                    </label>
+                </div>
+
+                <!-- Resumo e Envio para WhatsApp -->
+                <div class="p-6 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <div class="text-xs text-indigo-300 font-semibold uppercase tracking-wider">Estimativa de Investimento</div>
+                        <div class="text-3xl font-extrabold text-white font-heading mt-1" id="total-orcamento">R$ 1.100,00</div>
+                        <div class="text-[11px] text-slate-400 mt-1">Parcelamento disponível via cartão ou desconto à vista no Pix.</div>
+                    </div>
+                    <button onclick="enviarOrcamento()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Enviar Projeto no WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section class="py-20 border-t border-dark-border" id="sobre">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-5 flex justify-center">
+                    <img src="./assets/davi_dev_executive_ceo_blazer.webp" alt="Davi Rian" class="w-64 h-80 rounded-3xl object-cover object-top border-2 border-dark-border shadow-2xl">
+                </div>
+                <div class="md:col-span-7">
+                    <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">Sobre o Profissional</span>
+                    <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-1 mb-4">Quem está por trás do código?</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        Sou <strong>Davi Rian</strong>, natural de Salvador/BA. Atuo no desenvolvimento de soluções de software completas, unindo tecnologia de ponta, visão prática de negócios e automação comercial.
+                    </p>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                        Ao contrário de desenvolvedores que focam apenas na parte técnica, meu compromisso principal é com o <strong>resultado final do seu negócio</strong>: velocidade de carregamento, facilidade para o seu cliente final e sistemas que rodam no piloto automático sem te dar dor de cabeça.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 font-mono">
+                        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i> Salvador, Bahia</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Atendimento Nacional</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-4 h-4 text-cyan-400"></i> Código Próprio & Seguro</span>
+                    </div>
+
+                    <!-- Redes Sociais e Perfis Oficiais -->
+                    <div class="mt-8 pt-6 border-t border-dark-border">
+                        <span class="text-xs font-bold text-indigo-400 tracking-wider uppercase block mb-4">Presença Digital & Canais Oficiais</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                            <a href="https://github.com/davirian-dev" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span class="font-medium">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/davirian/" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-current inline-block text-blue-400" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span class="font-medium">LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/daviriann" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-current inline-block text-pink-400" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span class="font-medium">Instagram</span>
+                            </a>
+                            <a href="https://www.youtube.com/@daviriannn?sub_confirmation=1" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200" title="Inscrever-se no Canal">
+                                <svg class="w-4 h-4 fill-current inline-block text-red-500" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span class="font-medium">YouTube</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@daviriann" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-cyan-400" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.33-6.32V8.92a8.28 8.28 0 0 0 4.84 1.54V7.02a4.87 4.87 0 0 1-.92-.33Z"/></svg>
+                                <span class="font-medium">TikTok</span>
+                            </a>
+                            <a href="https://x.com/DaviRiann" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-current inline-block text-sky-400" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <span class="font-medium">X (Twitter)</span>
+                            </a>
+                            <a href="https://www.kwai.com/@daviriannnn" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <i data-lucide="video" class="w-4 h-4 text-amber-400"></i>
+                                <span class="font-medium">Kwai</span>
+                            </a>
+                            <a href="https://open.spotify.com/user/31lktxgjusaqtulieglfgxjsajq4" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <i data-lucide="music" class="w-4 h-4 text-emerald-400"></i>
+                                <span class="font-medium">Spotify</span>
+                            </a>
+                            <a href="https://www.facebook.com/davi.rian.641954/" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/50 hover:bg-dark-hover flex items-center gap-2.5 transition-all text-xs text-slate-200">
+                                <svg class="w-4 h-4 fill-current inline-block text-indigo-400" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <span class="font-medium">Facebook</span>
+                            </a>
+                            <a href="https://comunidade-davirian-fut-e-gamer.vercel.app/" target="_blank" rel="noopener" class="p-2.5 rounded-xl bg-gradient-to-r from-cyan-950/40 to-emerald-950/40 border border-cyan-500/30 hover:border-cyan-400 flex items-center gap-2.5 transition-all text-xs text-cyan-300 sm:col-span-2">
+                                <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i>
+                                <span class="font-bold">Portal da Comunidade Oficial (Gamer & Futebol)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-10 border-t border-dark-border bg-[#05070A] text-slate-500 text-xs text-center">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 <strong>Davi Rian</strong> · Todos os direitos reservados.
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5 text-slate-400">
+                <a href="https://github.com/davirian-dev" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-1 transition-colors" title="GitHub">
+                    <svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/davirian/" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-1 transition-colors" title="LinkedIn">
+                    <svg class="w-4 h-4 fill-current inline-block text-blue-400" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/daviriann" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-1 transition-colors" title="Instagram">
+                    <svg class="w-4 h-4 fill-current inline-block text-pink-400" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram
+                </a>
+                <a href="https://www.youtube.com/@daviriannn?sub_confirmation=1" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-1 transition-colors" title="Inscrever-se no YouTube">
+                    <svg class="w-4 h-4 fill-current inline-block text-red-500" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube
+                </a>
+                <a href="https://x.com/DaviRiann" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-1 transition-colors" title="X (Twitter)">
+                    <svg class="w-4 h-4 fill-current inline-block text-sky-400" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X
+                </a>
+                <a href="https://comunidade-davirian-fut-e-gamer.vercel.app/" target="_blank" rel="noopener" class="hover:text-cyan-400 flex items-center gap-1 transition-colors" title="Comunidade Oficial">
+                    <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i> Comunidade
+                </a>
+                <a href="https://wa.me/557196815876" target="_blank" rel="noopener" class="hover:text-emerald-400 flex items-center gap-1 transition-colors" title="WhatsApp">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    
+    <div style="text-align: center; margin-top: 50px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #a1a1aa;">
+      <p style="margin-bottom: 8px;">© 2026 Davirian Dev. Todos os direitos reservados.</p>
+      <div style="display: flex; gap: 16px; justify-content: center;">
+        <a href="/privacidade.html" style="color: #3b82f6; text-decoration: none;">Política de Privacidade</a>
+        <a href="/termos.html" style="color: #3b82f6; text-decoration: none;">Termos de Uso</a>
+      </div>
+    </div>
+</footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/557196815876?text=Ol%C3%A1%20Davi!%20Vim%20pelo%20seu%20site%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-black flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all glow-effect" title="Falar no WhatsApp">
+        <i data-lucide="message-square" class="w-7 h-7 stroke-[2.5]"></i>
+    </a>
+
+    <!-- Lógica da Calculadora e Lucide -->
+    <script>
+        lucide.createIcons();
+
+        // Padrão Profitize: Shader Orgânico de Aurora em Canvas2D Puro (Zero Libs 3D)
+        (function initProfitizeAurora() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const canvas = document.getElementById('profitize-aurora-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            let t = 0;
+            const speed = 0.002;
+            const color1 = '#4f46e5';
+            const color2 = '#06b6d4';
+            const color3 = '#ec4899';
+
+            const resize = () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            };
+            resize();
+            window.addEventListener('resize', resize, { passive: true });
+
+            const render = () => {
+                t += speed;
+                const { width, height } = canvas;
+                ctx.clearRect(0, 0, width, height);
+
+                const g1 = ctx.createRadialGradient(
+                    width * (0.3 + 0.2 * Math.sin(t)),
+                    height * (0.4 + 0.2 * Math.cos(t * 0.8)),
+                    20,
+                    width * 0.4,
+                    height * 0.5,
+                    width * 0.65
+                );
+                g1.addColorStop(0, color1);
+                g1.addColorStop(1, 'transparent');
+
+                const g2 = ctx.createRadialGradient(
+                    width * (0.7 + 0.2 * Math.cos(t * 1.2)),
+                    height * (0.6 + 0.2 * Math.sin(t)),
+                    20,
+                    width * 0.6,
+                    height * 0.5,
+                    width * 0.6
+                );
+                g2.addColorStop(0, color2);
+                g2.addColorStop(1, 'transparent');
+
+                const g3 = ctx.createRadialGradient(
+                    width * (0.5 + 0.25 * Math.sin(t * 0.7)),
+                    height * (0.8 + 0.15 * Math.cos(t * 1.1)),
+                    20,
+                    width * 0.5,
+                    height * 0.7,
+                    width * 0.5
+                );
+                g3.addColorStop(0, color3);
+                g3.addColorStop(1, 'transparent');
+
+                ctx.globalCompositeOperation = 'screen';
+                ctx.fillStyle = g1;
+                ctx.fillRect(0, 0, width, height);
+                ctx.fillStyle = g2;
+                ctx.fillRect(0, 0, width, height);
+                ctx.fillStyle = g3;
+                ctx.fillRect(0, 0, width, height);
+
+                requestAnimationFrame(render);
+            };
+
+            render();
+        })();
+
+        function calcBudget() {
+            let total = 0;
+            if (document.getElementById('mod-lp').checked) total += 600;
+            if (document.getElementById('mod-bot').checked) total += 500;
+            if (document.getElementById('mod-checkout').checked) total += 350;
+            if (document.getElementById('mod-painel').checked) total += 500;
+
+            document.getElementById('total-orcamento').innerText = 'R$ ' + total.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+            return total;
+        }
+
+        function enviarOrcamento() {
+            const itens = [];
+            if (document.getElementById('mod-lp').checked) itens.push("• Landing Page de Alta Conversão");
+            if (document.getElementById('mod-bot').checked) itens.push("• Bot de WhatsApp Personalizado");
+            if (document.getElementById('mod-checkout').checked) itens.push("• Gateway de Pagamentos Pix/Cartão");
+            if (document.getElementById('mod-painel').checked) itens.push("• Painel Administrativo / Dashboard");
+
+            const total = calcBudget();
+            const msg = `*SIMULAÇÃO DE PROJETO - DAVI RIAN TECH*\n\n` +
+                        `Olá Davi! Fiz uma simulação no seu site dos módulos que preciso:\n\n` +
+                        itens.join('\n') + `\n\n` +
+                        `💰 *Estimativa:* R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}\n\n` +
+                        `Gostaria de alinhar os detalhes e fechar esse projeto!`;
+
+            const encoded = encodeURIComponent(msg);
+            window.open(`https://wa.me/557196815876?text=${encoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
