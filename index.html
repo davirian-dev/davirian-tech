@@ -735,11 +735,11 @@
                         <div class="flex items-center gap-3">
                             <input type="checkbox" id="mod-lp" checked onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
                             <div>
-                                <div class="text-sm font-bold text-white">Site / Landing Page / Link de Bio</div>
-                                <div class="text-xs text-slate-400">Página rápida, responsiva e pronta para links de bio ou vendas</div>
+                                <div class="text-sm font-bold text-white">Link de Bio Profissional / Site Express</div>
+                                <div class="text-xs text-slate-400">Página rápida com todas as suas redes, produtos e botões para celular</div>
                             </div>
                         </div>
-                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 450</span>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 97</span>
                     </label>
 
                     <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
@@ -750,7 +750,7 @@
                                 <div class="text-xs text-slate-400">Atendimento 1x1, moderação de grupos ou funil 100% no automático</div>
                             </div>
                         </div>
-                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 500</span>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 197</span>
                     </label>
 
                     <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
@@ -761,31 +761,31 @@
                                 <div class="text-xs text-slate-400">Cobrança Pix instantânea com liberação imediata pós-pagamento</div>
                             </div>
                         </div>
-                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 350</span>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 147</span>
                     </label>
 
                     <label class="flex items-center justify-between p-4 rounded-xl bg-dark-card border border-dark-border hover:border-indigo-500/40 cursor-pointer transition-all">
                         <div class="flex items-center gap-3">
                             <input type="checkbox" id="mod-painel" onchange="calcBudget()" class="w-4 h-4 rounded text-indigo-600 focus:ring-0 bg-slate-900 border-slate-700">
                             <div>
-                                <div class="text-sm font-bold text-white">Edição de Vídeos & Gestão de Redes Sociais</div>
-                                <div class="text-xs text-slate-400">Cortes dinâmicos com IA e gerenciamento profissional de perfis</div>
+                                <div class="text-sm font-bold text-white">Pacote de Edição de Vídeos (Cortes Virais)</div>
+                                <div class="text-xs text-slate-400">Shorts/Reels com legendas dinâmicas via IA e ganchos de alta retenção</div>
                             </div>
                         </div>
-                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 400</span>
+                        <span class="text-xs font-mono font-bold text-emerald-400">+ R$ 150</span>
                     </label>
                 </div>
 
                 <!-- Resumo e Envio para WhatsApp -->
                 <div class="p-6 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
                     <div>
-                        <div class="text-xs text-indigo-300 font-semibold uppercase tracking-wider">Estimativa de Investimento</div>
-                        <div class="text-3xl font-extrabold text-white font-heading mt-1" id="total-orcamento">R$ 1.100,00</div>
-                        <div class="text-[11px] text-slate-400 mt-1">Parcelamento disponível via cartão ou desconto à vista no Pix.</div>
+                        <div class="text-xs text-indigo-300 font-semibold uppercase tracking-wider">Investimento Promocional</div>
+                        <div class="text-3xl font-extrabold text-white font-heading mt-1" id="total-orcamento">R$ 294,00</div>
+                        <div class="text-[11px] text-emerald-400 font-medium mt-1">Preço de entrada acessível para começar hoje no Pix ou cartão.</div>
                     </div>
                     <button onclick="enviarOrcamento()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        <span>Enviar Projeto no WhatsApp</span>
+                        <span>Garantir Vaga no WhatsApp</span>
                     </button>
                 </div>
             </div>
@@ -989,10 +989,10 @@
 
         function calcBudget() {
             let total = 0;
-            if (document.getElementById('mod-lp').checked) total += 450;
-            if (document.getElementById('mod-bot').checked) total += 500;
-            if (document.getElementById('mod-checkout').checked) total += 350;
-            if (document.getElementById('mod-painel').checked) total += 400;
+            if (document.getElementById('mod-lp').checked) total += 97;
+            if (document.getElementById('mod-bot').checked) total += 197;
+            if (document.getElementById('mod-checkout').checked) total += 147;
+            if (document.getElementById('mod-painel').checked) total += 150;
 
             document.getElementById('total-orcamento').innerText = 'R$ ' + total.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
             return total;
@@ -1000,17 +1000,17 @@
 
         function enviarOrcamento() {
             const itens = [];
-            if (document.getElementById('mod-lp').checked) itens.push("• Site / Landing Page / Link de Bio Profissional");
-            if (document.getElementById('mod-bot').checked) itens.push("• Bot WhatsApp/Telegram (Vendas & Grupos)");
-            if (document.getElementById('mod-checkout').checked) itens.push("• Checkout Pix / Venda Automática 24/7");
-            if (document.getElementById('mod-painel').checked) itens.push("• Edição de Vídeos & Gestão de Redes Sociais");
+            if (document.getElementById('mod-lp').checked) itens.push("• Link de Bio Profissional / Site Express (R$ 97)");
+            if (document.getElementById('mod-bot').checked) itens.push("• Bot WhatsApp/Telegram (Vendas & Grupos) (R$ 197)");
+            if (document.getElementById('mod-checkout').checked) itens.push("• Checkout Pix / Venda Automática 24/7 (R$ 147)");
+            if (document.getElementById('mod-painel').checked) itens.push("• Pacote de Edição de Vídeos (Cortes Virais) (R$ 150)");
 
             const total = calcBudget();
-            const msg = `*SIMULAÇÃO DE SERVIÇOS - DAVI RIAN TECH*\n\n` +
-                        `Olá Davi! Quero tirar minhas ideias do papel e montei esse pacote no seu site:\n\n` +
+            const msg = `*SIMULAÇÃO PROMOCIONAL - DAVI RIAN TECH*\n\n` +
+                        `Olá Davi! Vi os preços promocionais no seu site e quero fechar esse pacote:\n\n` +
                         itens.join('\n') + `\n\n` +
-                        `💰 *Investimento Estimado:* R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}\n\n` +
-                        `Podemos alinhar os detalhes para você iniciar?`;
+                        `🔥 *Investimento Promocional:* R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}\n\n` +
+                        `Como faço para garantir essa condição e você começar hoje?`;
 
             const encoded = encodeURIComponent(msg);
             window.open(`https://wa.me/557196815876?text=${encoded}`, '_blank');
