@@ -1,0 +1,74 @@
+{
+  "vercel.json": {
+    "mtime": 1795564116.2938237,
+    "seen": 1795721433.721353,
+    "ast_hash": "c46b605cc6da12a23c6c2d92d37e644b",
+    "semantic_hash": "c46b605cc6da12a23c6c2d92d37e644b"
+  },
+  "assets/videos/davi_dev_ai_analytics.mp4": {
+    "mtime": 1795564116.192496,
+    "seen": 1795721433.721353,
+    "ast_hash": "fe020c59745fed01bbcce24dcd373624",
+    "semantic_hash": "fe020c59745fed01bbcce24dcd373624"
+  },
+  "assets/videos/davi_dev_studying_code.mp4": {
+    "mtime": 1795564116.192496,
+    "seen": 1795721433.721353,
+    "ast_hash": "46d95ccd178f109e1889cfca4a57529e",
+    "semantic_hash": "46d95ccd178f109e1889cfca4a57529e"
+  },
+  "assets/videos/davi_dev_timeline_editing.mp4": {
+    "mtime": 1795564116.208173,
+    "seen": 1795721433.721353,
+    "ast_hash": "045216b36e91383d4d03d913615c7cfc",
+    "semantic_hash": "045216b36e91383d4d03d913615c7cfc"
+  },
+  "assets/videos/davi_dev_workstation_typing.mp4": {
+    "mtime": 1795564116.224803,
+    "seen": 1795721433.721353,
+    "ast_hash": "2887ebb57aed89655cd579553971be7b",
+    "semantic_hash": "2887ebb57aed89655cd579553971be7b"
+  },
+  "assets/videos/davi_video_podcast_live.mp4": {
+    "mtime": 1795564116.2572672,
+    "seen": 1795721433.721353,
+    "ast_hash": "b99dd202c79108ed6b7710a8fc3c1e2f",
+    "semantic_hash": "b99dd202c79108ed6b7710a8fc3c1e2f"
+  },
+  "assets/videos/davi_video_reuniao_executiva.mp4": {
+    "mtime": 1795564116.2732015,
+    "seen": 1795721433.721353,
+    "ast_hash": "dc0907d50122f51c060b9f6910774223",
+    "semantic_hash": "dc0907d50122f51c060b9f6910774223"
+  },
+  "assets/videos/teaser_dev_typing.mp4": {
+    "mtime": 1795564116.2732015,
+    "seen": 1795721433.721353,
+    "ast_hash": "37189ef30b16ac2b2ede3d52adf004d6",
+    "semantic_hash": "37189ef30b16ac2b2ede3d52adf004d6"
+  },
+  "assets/videos/teaser_holographic_timeline.mp4": {
+    "mtime": 1795564116.2732015,
+    "seen": 1795721433.721353,
+    "ast_hash": "4fe9a6614e91688ff4e01c1a19071bb9",
+    "semantic_hash": "4fe9a6614e91688ff4e01c1a19071bb9"
+  },
+  "assets/videos/teaser_man_studying_code.mp4": {
+    "mtime": 1795564116.2732015,
+    "seen": 1795721433.721353,
+    "ast_hash": "3850e6905f387b8116aef737bf1b0b0c",
+    "semantic_hash": "3850e6905f387b8116aef737bf1b0b0c"
+  },
+  "assets/videos/teaser_robotic_camera.mp4": {
+    "mtime": 1795564116.2732015,
+    "seen": 1795721433.721353,
+    "ast_hash": "aa37e0b7239cc7fd166bb4a83d094f9f",
+    "semantic_hash": "aa37e0b7239cc7fd166bb4a83d094f9f"
+  },
+  "assets/videos/teaser_smartphone_notification.mp4": {
+    "mtime": 1795564116.289159,
+    "seen": 1795721433.721353,
+    "ast_hash": "5f7d6b3654324497fc552193d8e1a665",
+    "semantic_hash": "5f7d6b3654324497fc552193d8e1a665"
+  }
+}

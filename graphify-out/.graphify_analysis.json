@@ -1,0 +1,23 @@
+{
+  "communities": {
+    "0": [
+      "vercel",
+      "vercel_headers"
+    ]
+  },
+  "cohesion": {
+    "0": 1.0
+  },
+  "gods": [
+    {
+      "id": "vercel_headers",
+      "label": "headers",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
